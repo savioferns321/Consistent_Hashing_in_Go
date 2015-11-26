@@ -139,7 +139,9 @@ func main() {
 	keys = append(keys, murmur3.Sum64([]byte(node3)))
 
 	keys.Sort()
-	fmt.Println("Keys array is : ", keys)
+	for index, element := range keys {
+		fmt.Println(index, " --> ", element)
+	}
 
 	for _, element := range keys {
 		switch element {
