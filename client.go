@@ -140,18 +140,18 @@ func main() {
 
 	keys.Sort()
 	for index, element := range keys {
-		fmt.Println(index, " --> ", element)
-	}
-
-	for _, element := range keys {
+		fmt.Print(index, " --> ", element)
 		switch element {
 
 		case murmur3.Sum64([]byte(node1)):
 			nodeMap[element] = node1
+			fmt.Println(" -->", node1)
 		case murmur3.Sum64([]byte(node2)):
 			nodeMap[element] = node2
+			fmt.Println(" -->", node2)
 		case murmur3.Sum64([]byte(node3)):
 			nodeMap[element] = node3
+			fmt.Println(" -->", node3)
 		}
 
 	}
